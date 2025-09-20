@@ -460,6 +460,58 @@ body.dark-mode #projects ul li:hover {
     box-shadow: var(--shadow-medium);
 }
 
+/* Internship Section */
+#internships {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* light background to separate section */
+}
+
+#internships h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#internships h3 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#internships h4 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#internships ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+}
+
+#internships li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#internships button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#internships button:hover {
+  background-color: #0051c3;
+}
+
+
 /* Contact Section */
 #contact {
     background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
