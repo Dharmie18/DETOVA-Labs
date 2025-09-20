@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Internship | Detova Labs</title>
+      <link rel="stylesheet" href="styles.css"> <!-- reuse your main CSS -->
+</head>
+<body>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    label {
+      display: block;
+      margin: 5px 0 3px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+        background-color: rgba(40, 167, 69, 0.3); /* light green background */
+        color: black;
+        border: 1px solid rgba(40, 167, 69, 0.7); /* green border */
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Apply for Internship</h1>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="contact">Telegram/Discord Username</label>
+      <input type="text" id="contact" name="contact" required>
+
+      <label for="role">Role you’re applying for</label>
+      <select id="role" name="role" required>
+        <option value="">--Select Role--</option>
+        <option value="Blockchain Developer Intern">Blockchain Developer Intern</option>
+        <option value="Frontend Developer Intern">Frontend Developer Intern</option>
+        <option value="Backend Developer Intern">Backend Developer Intern</option>
+        <option value="Smart Contract Security Intern">Smart Contract Security Intern</option>
+        <option value="AI/ML Intern">AI/ML Intern</option>
+        <option value="NFT Digital Artist Intern">NFT Digital Artist Intern</option>
+        <option value="Graphic Designer Intern">Graphic Designer Intern</option>
+        <option value="UI/UX Designer Intern">UI/UX Designer Intern</option>
+        <option value="Animation Intern">Animation Intern</option>
+        <option value="Content Marketing Intern">Content Marketing Intern</option>
+        <option value="Community Manager Intern">Community Manager Intern</option>
+        <option value="Social Media Strategy Intern">Social Media Strategy Intern</option>
+        <option value="Research & Alpha Intern">Research & Alpha Intern</option>
+        <option value="Product Management Intern">Product Management Intern</option>
+        <option value="Operations Intern">Operations Intern</option>
+        <option value="Business Development Intern">Business Development Intern</option>
+        <option value="Investor Relations Intern">Investor Relations Intern</option>
+      </select>
+
+      <label for="skills">Tools/Skills you’re comfortable with</label>
+      <input type="text" id="skills" name="skills" placeholder="e.g., Python, Figma, Solidity" required>
+
+      <label for="portfolio">Portfolio/GitHub/LinkedIn</label>
+      <input type="url" id="portfolio" name="portfolio" placeholder="Optional">
+
+      <label for="why">Why do you want to join DETOVA Labs?</label>
+      <textarea id="why" name="why" rows="4" required></textarea>
+
+      <label>
+        <input type="checkbox" name="understand" required>
+        I understand this is an unpaid internship focused on experience, exposure, and certification
+      </label>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

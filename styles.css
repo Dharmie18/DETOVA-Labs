@@ -145,23 +145,25 @@ body.dark-mode nav a:hover {
 }
 
 /* Buttons */
-button {
+/* Apply button styles to links with class 'btn' */
+.btn {
+    display: inline-block;
+    text-decoration: none;
     background: linear-gradient(135deg, var(--primary-green), var(--light-green));
     color: var(--white);
-    border: none;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
-    cursor: pointer;
     font-weight: 600;
-    transition: var(--transition);
     font-size: 1rem;
     letter-spacing: -0.01em;
     box-shadow: var(--shadow-light);
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
-button::before {
+.btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -172,20 +174,21 @@ button::before {
     transition: left 0.5s;
 }
 
-button:hover {
+.btn:hover {
     background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
     transform: translateY(-3px);
     box-shadow: var(--shadow-heavy);
 }
 
-button:hover::before {
+.btn:hover::before {
     left: 100%;
 }
 
-button:active {
+.btn:active {
     transform: translateY(-1px);
     box-shadow: var(--shadow-medium);
 }
+
 
 /* Main Sections */
 section {
