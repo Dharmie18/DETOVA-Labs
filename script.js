@@ -26,7 +26,7 @@ function updateHeaderStyling() {
 
 // Dark/Light Mode Toggle
 function initDarkMode() {
-    const darkModeBtn = document.querySelector('header button');
+    const darkModeBtn = document.querySelector('.dark-mode-toggle');
     const body = document.body;
     
     // Check for saved theme preference or default to light mode
@@ -65,36 +65,16 @@ function updateDarkModeButton(button, isDark) {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    // Create mobile menu toggle button
     const header = document.querySelector('header');
     const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
     
-    // Create hamburger menu button
-    const menuToggle = document.createElement('div');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.innerHTML = '<span></span><span></span><span></span>';
-    menuToggle.setAttribute('aria-label', 'Toggle mobile menu');
-    
-    // Insert menu toggle before the dark mode button
-    const darkModeBtn = document.querySelector('header button');
-    header.insertBefore(menuToggle, darkModeBtn);
+    if (!menuToggle) return;
     
     // Toggle mobile menu
     menuToggle.addEventListener('click', function() {
         nav.classList.toggle('active');
         menuToggle.classList.toggle('active');
-        
-        // Animate hamburger menu
-        const spans = menuToggle.querySelectorAll('span');
-        if (menuToggle.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = '';
-        }
     });
     
     // Close mobile menu when clicking on nav links
@@ -103,12 +83,6 @@ function initMobileMenu() {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
             menuToggle.classList.remove('active');
-            
-            // Reset hamburger menu
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = '';
         });
     });
     
@@ -117,12 +91,6 @@ function initMobileMenu() {
         if (!header.contains(e.target) && nav.classList.contains('active')) {
             nav.classList.remove('active');
             menuToggle.classList.remove('active');
-            
-            // Reset hamburger menu
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = '';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = '';
         }
     });
 }
