@@ -144,6 +144,12 @@ body.dark-mode nav a:hover {
     background: linear-gradient(135deg, var(--primary-green), var(--light-green));
 }
 
+.logo {
+  width: 60px;       /* default desktop size */
+  height: auto;      /* keeps aspect ratio */
+  max-width: 100%;   /* makes sure it never overflows */
+}
+
 /* Buttons */
 /* Apply button styles to links with class 'btn' */
 .btn {
@@ -917,6 +923,14 @@ body.dark-mode .menu-toggle:hover {
         animation: slideDown 0.3s ease-out;
     }
     
+    /* On smaller screens, make the logo smaller */
+    @media (max-width: 600px) {
+        .logo {
+        width: 40px;
+        }
+    }
+
+
     @keyframes slideDown {
         from {
             opacity: 0;
